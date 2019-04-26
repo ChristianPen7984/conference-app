@@ -1,0 +1,84 @@
+.map-container {
+    width: 80%;
+    height: 95vh;
+    margin: 0 auto;
+    padding: 50px 0px 50px 0px;
+}
+
+.map {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #7A99FF; 
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+}
+
+.border {
+    padding: 5px;
+}
+
+agm-map {
+    height: 700px;
+}
+
+.search {
+    text-align: center;
+    padding: 20px;
+}
+
+.searchInput {
+    padding: 12px 20px;
+    width: 30%;
+    border: solid 1px #000000;
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+    font-family: FontAwesome !important;
+    font-size: 24px;
+    text-align: center;
+}
+
+.searchInput:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+@media (max-width: 1500px) {
+    .searchInput {
+        width: 40%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .map-container {
+        width: 90%;
+    }
+    agm-map {
+        height: 600px;
+    }
+    .searchInput {
+        width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    agm-map {
+        height: 500px;
+    }
+    .searchInput {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+
+@media (max-height: 750px) {
+    .map-container {
+        padding-top: 30px;
+    }
+    agm-map {
+        height: 400px;
+    }
+}
+
+@media (max-height: 650px) {
+    agm-map {
+        height: 300px;
+    }
+}

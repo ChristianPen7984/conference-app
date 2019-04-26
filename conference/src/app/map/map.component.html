@@ -1,3 +1,13 @@
-<p>
-  map works!
-</p>
+<div class="map-container">
+  <div class="map">
+    <div class="border">
+      <agm-map [latitude]='latitude' [longitude]='longitude' [styles]="styles" [zoom]="11">
+        <agm-marker [latitude]="latitude" [longitude]="longitude">
+        </agm-marker>
+      </agm-map>
+      <div class="search">
+        <input class="searchInput" type="text" placeholder="&#xf002;   Search Conference Location">
+      </div>
+    </div>
+  </div>
+</div>

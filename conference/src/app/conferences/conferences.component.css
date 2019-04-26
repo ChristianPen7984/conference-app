@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+.conferences-container {
+    max-width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.filter-container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.filter {
+    padding: 10px 14px;
+    width: 30%;
+    margin-right: 60px;
+    border: solid 1px #000000;
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+    font-family: FontAwesome !important;
+    font-size: 18px;
+    text-align: center;
+}
+
+.filter:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+
+.conference-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.conference-cards>div {
+    flex-basis: auto;
+    border: solid 1px black;
+    background-color: #b1b1b1;
+    margin: 15px;
+}
+
+.header {
+    padding: 15px;
+    text-align: center;
+    background-color: #7A99FF;
+    border-bottom: solid 1px #000000;
+}
+
+.header h3 {
+    margin: 0px;
+}
+
+.body {
+    color: #000000;
+}
+
+.whereWhen {
+    font-size: 18px;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.whereWhen p label {
+    font-weight: bold;
+}
+
+.map, .buttonView {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.map button {
+    width: 100%;
+    padding: 8px 120px 8px 120px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #cecece;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+.map button:hover {
+    transition: 200ms ease;
+    background-color: #929292 !important;
+}
+
+.map button i {
+    padding-left: 10px
+}
+
+.img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+.desc {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 90px;
+}
+
+.desc p {
+    word-break: normal;
+    word-wrap: break-word;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttonView {
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+}
+
+.buttonView button {
+    width: 60%;
+    padding: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #cecece;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+    border-radius: 10px;
+    border: solid 1px #000000;
+}
+
+.buttonView button:hover {
+    transition: 200ms ease;
+    background-color: #6b6a6a !important;
+}
+
+@media (max-width: 1700px) {
+    .desc {
+        height: 120px;
+    }
+    .map button {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .map button i {
+        padding-left: 5px
+    }
+}
+
+@media (max-width: 1600px) {
+    .whereWhen, .desc p {
+        font-size: 16px;
+    }
+    .whereWhen {
+        height: 120px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .whereWhen, .desc p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .conference-cards>div {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .conference-cards>div {
+        flex-basis: 40%;
+    }
+    .filter {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    .conference-cards>div {
+        flex-basis: 100%;
+    }
+    .whereWhen, .desc p {
+        font-size: 18px;
+    }
+    .filter-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .filter {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .whereWhen, .desc p {
+        font-size: 15px;
+    }
+}

@@ -1,3 +1,32 @@
-<p>
-  conferences works!
-</p>
+<div class="conferences-container">
+  <div class="filter-container">
+    <input class="filter" type="text" placeholder="&#xf002;   Search Conference"
+    (input)="setFilter($event.target.value)">
+  </div>
+  <div class="conference-cards">
+    <div *ngFor="let conference of conferences | conferenceSearch:searchData">
+      <div class="header">
+        <h3>{{conference.title}}</h3>
+      </div>
+      <div class="body">
+        <div class="whereWhen">
+          <p><label>When: </label> {{conference.date}} <i class="fa fa-calendar fa-md pointer" (click)="openCalendarModal()"></i></p>
+          <p><label>Where: </label> {{conference.location}}</p>
+        </div>
+        <div class="map">
+          <button class="pointer" [routerLink]="['/map',conference.title]">Find on map <i class="fa fa-arrow-right"></i></button>
+        </div>
+        <div class="img">
+          <img src="{{conference.image}}" alt="{{conference.title}}">
+        </div>
+        <div class="desc">
+          <p>{{conference.summary}}</p>
+        </div>
+        <div class="buttonView">
+          <button class="view pointer" [routerLink]="['/conference',conference.title]">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-calendar-modal id="app-calendar-modal" style="visibility:hidden"></app-calendar-modal>

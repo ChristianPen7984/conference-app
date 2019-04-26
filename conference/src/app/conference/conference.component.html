@@ -1,3 +1,28 @@
-<p>
-  conference works!
-</p>
+<div class="conference">
+  <div class="conference-container">
+    <div class="header">
+      <h2>{{conference.title}}</h2>
+    </div>
+    <div class="body">
+      <div class="desc">
+        <img src="{{conference.image}}" alt="{{conference.title}}">
+        <p>
+          <img src="{{conference.image}}" alt="{{conference.title}}">
+          {{conference.description}}
+        </p>
+      </div>
+      <div class="whereWhen">
+        <p><span>When:</span> {{conference.date}} <i class="fa fa-calendar fa-md pointer"
+            (click)="openCalendarModal()"></i></p>
+        <p><span>Where: </span> {{conference.location}}</p>
+      </div>
+      <div class="map">
+        <agm-map [latitude]='latitude' [longitude]='longitude' [styles]="styles" [zoom]="11">
+          <agm-marker [latitude]="latitude" [longitude]="longitude">
+          </agm-marker>
+        </agm-map>
+      </div>
+    </div>
+  </div>
+</div>
+<app-calendar-modal id="app-calendar-modal" style="visibility:hidden"></app-calendar-modal>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from '../map';
+import { Conference } from '../conference';
+import { ActivatedRoute } from '@angular/router';
+import { Conferences } from '../conferences';
 
 @Component({
   selector: 'app-map',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  latitude: number;
+  longitude: number;
+  styles = map;
+
+  conference: Conference;
+
+  constructor(private route: ActivatedRoute) { 
+    Conferences.forEach((conference: Conference) => {
+      if (conference.title.includes(this.route.snapshot.paramMap.get('title'))) {
+        this.latitude = conference.lat;
+        this.longitude = conference.long;
+        return this.conference = conference;
+      }
+    });
+  }
 
   ngOnInit() {
+    window.scroll(0, 0);
   }
 
 }
