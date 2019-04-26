@@ -1,3 +1,71 @@
-<p>
-  home works!
-</p>
+<div class="home-container">
+  <div class="carousel-container">
+    <div id="carousel-slide" *ngFor="let conference of conferences">
+      <div class="conference-text">
+        <span class="conference-title">{{conference.title}}</span>
+        <span class="conference-date">{{conference.date}}</span>
+      </div>
+      <div class="button-wrapper">
+        <button class="view pointer" [routerLink]="['/conference',conference.title]">View</button>
+      </div>
+      <img src="{{conference.image}}" alt="{{conference.title}}">
+      <a class="prev pointer" (click)="slideIterator(conference.id,'prev')">&#10094;</a>
+      <a class="next pointer" (click)="slideIterator(conference.id,'next')">&#10095;</a>
+    </div>
+    <div id="dots-wrapper" class="dots-wrapper">
+      <i id="dot1" class="fa fa-circle fa-lg"></i>
+      <i id="dot2" class="fa fa-circle fa-lg"></i>
+      <i id="dot3" class="fa fa-circle fa-lg"></i>
+    </div>
+  </div>
+  <div class="aboutus-container">
+    <div class="desc">
+      <h1>ABOUT US</h1>
+      <p>Here at Conference.io, our goal is to provide individuals with the best experience when
+        searching for conferences around the world. It is of our pleasure to allow access to the most efficient
+        information regarding particular conferences of interest. Typically, an individual would
+        spend a considerable amount of time browsing the web for various conferences. However,
+        we solve this problem by providing them all within a singular resource.
+        Users have the ability to browse our continously expanding conglomeration of conferences
+        with ease. Several pieces of data regarding a conference are provided including:
+        name, location, and date.</p>
+    </div>
+    <div class="img"><img src="../../../assets/logo3.png" alt=""></div>
+  </div>
+  <div class="dates-container">
+    <div class="upcoming">
+      <h1>Upcoming Conference Dates</h1>
+      <div class="cards">
+        <div class="card" *ngFor="let conference of conferences">
+          <div class="card-img">
+            <img src="{{conference.image}}" alt="{{conference.title}}">
+          </div>
+          <div class="card-info">
+            <div class="header">
+              <h2>{{conference.title}}</h2>
+              <i class="fa fa-calendar fa-lg pointer" (click)="openCalendarModal()"></i>
+            </div>
+            <div class="info">
+              <div class="when">
+                <label>WHEN: <span>{{conference.date}}</span></label>
+              </div>
+              <div class="where">
+                <label>WHERE: <span>{{conference.location}}</span></label>
+              </div>
+            </div>
+            <div class="button">
+              <button class="pointer" [routerLink]="['/conference',conference.title]">Find out more</button>
+            </div>
+          </div>
+          <hr *ngIf="conference.title != 'Black Hat 2019'">
+        </div>
+      </div>
+    </div>
+    <div class="calendar">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=vm6fubnli4gm4ridgtmo6cao6s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York">
+      </iframe>
+    </div>
+  </div>
+</div>
+<app-calendar-modal id="app-calendar-modal" style="visibility:hidden"></app-calendar-modal>

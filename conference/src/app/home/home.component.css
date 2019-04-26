@@ -1,0 +1,527 @@
+/* Carousel styling */
+/* -------------------------------------- */
+
+.carousel-container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.carousel-container img {
+  width: 100%;
+  max-height: 95vh;
+  min-height: 300px;
+  border-top: solid 2px #6287FF;
+  border-bottom: solid 2px #6287FF;
+}
+
+.conference-text {
+  width: 100%;
+  color: #ffffff;
+  letter-spacing: 5px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  font-weight: bolder;
+  background-color: rgba(53, 53, 53, 0.671);
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+  border-radius: 5px;
+  width: 20%;
+  left: 40%;
+  padding: 10px;
+
+}
+
+.conference-title {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.conference-date {
+  font-size: 25px;
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 100px 16px 100px 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 600ms ease;
+  user-select: none;
+  background-color: rgba(98, 135, 255, 0.39);
+}
+
+.next {
+  right: 0;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.prev:hover, .next:hover {
+  background-color: #6287FF
+}
+
+#carousel-slide:nth-child(2), #carousel-slide:nth-child(3) {
+  display: none;
+}
+
+.button-wrapper {
+  font-size: 15px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.view {
+  padding: 10px 70px 10px 70px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #7A99FF;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+  border-radius: 10px;
+  border: solid 1px #000000;
+}
+
+button:hover {
+  transition: 200ms ease;
+  background-color: #6287FF !important;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots-wrapper i {
+  padding: 5px;
+  color: #808080;
+}
+
+/* About us styling */
+/* -------------------------------------- */
+
+
+.aboutus-container {
+  height: auto;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+}
+
+.desc, .img {
+  display: inline-block;
+}
+
+.desc {
+  width: 50%;
+}
+
+.img {
+  width: 50%;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.desc h1, .desc p {
+  padding: 0px 70px 0px 70px;
+}
+
+.desc p {
+  margin-left: 10px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+
+.img img {
+  width: 700px;
+  height: 400px;
+}
+
+/* Dates styling */
+/* -------------------------------------- */
+
+.dates-container {
+  height: auto;
+  width: 100%;
+  background-color: #a6a6a6;
+  border-top: solid 2px #6287FF;
+  padding: 20px 0px 20px 0px;
+}
+
+.upcoming, .calendar {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.calendar iframe {
+  padding: 10px;
+  background-color: #7A99FF;
+  border: none;
+  text-align: center;
+  height: 700px;
+  width: 95%;
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+}
+
+.upcoming h1 {
+  text-align: center;
+}
+
+.upcoming .cards .card {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+}
+
+.upcoming .cards .card hr {
+  visibility: hidden;
+}
+
+.card-img, .card-info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-img {
+  width: 35%;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.card-img img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: solid 1px #000000;
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+}
+
+.card-info {
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+  border: solid 1px #000000;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.card-info .header {
+  width: 100%;
+  background-color: #7A99FF;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-info .header h2 {
+  margin: 0px;
+  padding: 5px 0px 5px 0px;
+}
+
+.card-info .header i {
+  visibility: hidden;
+}
+
+.card-info .info, .card-info .button {
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+}
+
+.card-info .info {
+  width: 40%;
+  vertical-align: middle;
+  padding: 10px 20px 0px 20px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-info .button {
+  width: 40%;
+  vertical-align: middle;
+  margin-top: 10px;
+  text-align: center;
+  border-bottom-right-radius: 10px;
+}
+
+.card-info .button button {
+  padding: 10px 20px 10px 20px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #7A99FF;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+  border-radius: 10px;
+  border: solid 1px #000000;
+}
+
+.when, .where {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.when label, .where label {
+  font-weight: bold;
+}
+
+.when span, .where span {
+  font-weight: normal;
+}
+
+@media (max-width: 1700px) {
+  .card-info .button button {
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 1585px) {
+
+  .calendar iframe {
+      width: 90%;
+      height: 550px;
+      margin-top: 170px;
+  }
+  .upcoming {
+      width: 55%;
+  }
+  .calendar {
+      width: 45%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .upcoming {
+      width: 100%;
+  }
+  .calendar {
+      display: none;
+  }
+  .cards {
+      background-color: #666666a8;
+      box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+      border: solid 1px #000000;
+      margin: 30px;
+      padding: 10px;
+      border-radius: 10px;
+  }
+  .card-info {
+      height: auto;
+  }
+  .card-info .button, .card-info .info {
+      height: auto;
+      padding: 20px;
+      margin: 0px;
+  }
+  .card-info .header h2 {
+      display: inline-block;
+  }
+  .card-info .header i {
+      visibility: visible;
+      float: right;
+      padding: 10px 0px 10px 0px;
+      transform: translateX(-20px);
+  }
+  .upcoming .cards .card hr {
+      visibility: visible;
+      border: solid 1px #000000;
+  }
+  .upcoming .cards .card {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+  }
+  .card-img img {
+      width: 300px;
+      margin: 15px 0px 15px 0px;
+  }
+  .card-info {
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 1370px) {
+  .desc {
+      width: 100%;
+  }
+  .img {
+      display: none;
+  }
+  .aboutus-container {
+      text-align: center;
+  }
+}
+
+@media (max-width: 1250px) {
+  .desc p {
+      font-size: 20px;
+      letter-spacing: 1px;
+      line-height: 25px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .conference-title {
+      font-size: 22px;
+  }
+  .conference-date {
+      font-size: 20px;
+  }
+  .next, .prev {
+      top: 50%;
+      padding: 50px 16px 50px 16px;
+  }
+  .button-wrapper {
+      bottom: 60px;
+  }
+  .view {
+      padding: 5px 50px 5px 50px;
+      font-size: 15px;
+  }
+  .dots-wrapper {
+      bottom: 20px;
+  }
+  .dots-wrapper i {
+      font-size: 20px;
+  }
+  .card-img img {
+      width: 250px;
+  }
+  .card-info {
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .conference-text {
+      width: 50%;
+      left: 25%;
+  }
+  .cards {
+      padding: 10px 20px 10px 20px;
+  }
+  .card-img img {
+      display: none;
+  }
+  .card-info {
+      width: 100%;
+      margin: 0px 0px 10px 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  .desc p, .desc h1 {
+      padding: 0px 20px 0px 20px;
+  }
+  .desc p {
+      font-size: 18px;
+      line-height: 20px;
+  }
+  .next, .prev {
+      padding: 25px 14px 25px 14px;
+  }
+  .card-info .button {
+      padding: 0px;
+  }
+  .card-info .info {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .conference-title {
+      font-size: 15px;
+  }
+  .conference-date {
+      font-size: 13px;
+  }
+  .button-wrapper {
+      bottom: 40px;
+  }
+  .view {
+      padding: 5px 40px 5px 40px;
+      font-size: 13px;
+  }
+  .dots-wrapper {
+      bottom: 10px;
+  }
+  .dots-wrapper i {
+      font-size: 14px;
+  }
+  .info, .button {
+      width: 100% !important;
+  }
+  .button {
+      padding-bottom: 20px !important;
+  }
+  .button button {
+      width: 70%;
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .aboutus-container {
+      margin-top: 0px;
+  }
+  .desc h1 {
+      font-size: 20px;
+      text-align: center
+  }
+  .desc p {
+      font-size: 15px;
+      margin: 0px;
+      line-height: 18px;
+  }
+  .desc p, .desc h1 {
+      padding: 0px 20px 0px 20px;
+  }
+  .upcoming h1 {
+      font-size: 20px;
+  }
+  .card-info .header h2 {
+      font-size: 18px;
+  }
+  .when, .where {
+      font-size: 15px;
+  }
+  .card-info .button button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .desc p {
+      font-size: 13px;
+      line-height: 15px;
+  }
+  .desc p, .desc h1 {
+      padding: 0px 10px 0px 10px;
+  }
+  .next, .prev {
+      padding: 15px 10px 15px 10px;
+  }
+}
