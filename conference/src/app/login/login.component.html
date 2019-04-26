@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<div class="loginContainer">
+  <div class="form-container">
+    <h1>Sign in</h1>
+    <form>
+      <label>Username/Email:</label>
+      <input class="username" type="text" required="required" placeholder="&#xf007;" />
+      <label>Password:</label>
+      <input class="password" type="password" required="required" placeholder="&#xf023;" />
+      <a>Forgot password?</a>
+      <div class="btnGroup">
+        <button class="pointer" (click)="login()">SIGN IN</button>
+      </div>
+    </form>
+  </div>
+</div>

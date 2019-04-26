@@ -31,5 +31,9 @@ export class NavbarComponent implements OnInit {
     currentElement.removeClass('navbar-container').addClass('navbar-container responsive') :
     currentElement.removeClass('navbar-container responsive').addClass('navbar-container');
   }
+
+  collapseMenu(): void {
+    this.toggleHamburger();
+  }
   
 }

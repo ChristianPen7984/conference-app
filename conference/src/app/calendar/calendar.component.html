@@ -10,7 +10,7 @@
             <p>When: {{conference.date}}</p>
             <p>Where: {{conference.location}}</p>
           </div>
-          <button class="pointer">View</button>
+          <button class="pointer" [routerLink]="['/conference',conference.title]">View</button>
         </div>
         <div class="img"><img src="{{conference.image}}" alt="{{conference.title}}"></div>
       </div>

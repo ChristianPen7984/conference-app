@@ -1,3 +1,43 @@
-<p>
-  create works!
-</p>
+<div class="create-container">
+  <div class="conference">
+    <div class="header">
+      <h2>CREATE A CONFERENCE</h2>
+    </div>
+    <div class="body">
+      <form>
+        <div class="form-group1">
+          <div class="title-container">
+            <label for="title">Title:</label><br>
+            <input type="text" class="title" required>
+          </div>
+          <div class="desc-container">
+            <label for="desc">Description:</label><br>
+            <textarea class="desc" cols="30" rows="5" required></textarea>
+          </div>
+        </div>
+        <div class="form-group2">
+          <div class="date-container">
+            <label for="date">Date:</label><br>
+            <input type="text" class="date" required><i class="fa fa-calendar fa-lg pointer"
+            (click)="openCalendarModal()"></i>
+          </div>
+          <div class="location-container">
+            <label for="location">Location:</label><br>
+            <input type="text" class="location" required>
+          </div>
+        </div>
+        <div class="btnGroup">
+          <div class="fileUpload">
+            <button class="pointer">UPLOAD IMAGE</button><br>
+            <input type="file" name="myfile" required/>
+          </div><br>
+          <button class="pointer">CREATE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="logout">
+    <button class="pointer" (click)="logout()">LOG OUT</button>
+  </div>
+</div>
+<app-calendar-modal id="app-calendar-modal" style="visibility:hidden"></app-calendar-modal>

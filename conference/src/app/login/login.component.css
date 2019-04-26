@@ -1,0 +1,113 @@
+.loginContainer {
+    width: 100%;
+    height: 95vh;
+    position: fixed;
+    background-image: url("../../assets/login-background.jpeg");
+}
+
+.form-container {
+    max-width: 30%;
+	margin: 0 auto;
+	background-color: #272727bb;
+	padding: 10px 50px 40px 50px;
+	margin-top: 50px;
+	border: solid 1px #000000;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 1250px) {
+	.loginContainer {
+		max-width: 80%;
+	}
+}
+
+.form-container > h1 {
+	letter-spacing: 4px;
+	color: #ffffff;
+}
+
+form {
+	margin-top: 50px
+}
+
+form > label {
+	font-size: 20px;
+	color: #ffffff;
+	letter-spacing: 4px;
+}
+
+form > input[type="text"], form > input[type="password"] {
+    font-family: FontAwesome;
+	font-size: 20px;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: solid 1px #000000;
+	border-bottom: 2px solid #ffffff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+form > input[type="text"] {
+	margin-bottom: 40px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.btnGroup button {
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #ffffff;
+	width: 50%;
+	border: solid 1px #000000;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media(max-width:600px) {
+	.btnGroup button {
+		width: 95%;
+	}
+}
+
+.btnGroup button:hover {
+	background-color: #b3b3b3;
+}
+
+.btnGroup button:focus {
+	background-color: #666666;
+}
+
+form > a {
+	text-decoration: none;
+	color: #b3b3b3;
+	float: right;
+}
+
+.btnGroup {
+	width: 100%;
+	margin-top: 40px;
+	text-align: center;
+}
+
+@media(max-width:750px) {
+	form > label {
+		font-size:16px;
+	}
+	form > a, .create > span, .create > span > a {
+		font-size: 15px;
+	}
+}
+
+@media(max-width:400px) {
+	.loginContainer {
+		margin-top: 0px;
+	}
+}

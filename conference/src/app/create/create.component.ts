@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
+  }
+
+  logout() {
+    this.authService.logout();
+  }
+
+  openCalendarModal(): void {
+    $('app-calendar-modal').css('visibility', 'visible');
   }
 
 }
