@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Conferences } from 'src/app/conferences';
+import { ModalServicesService } from '../services/modal-services.service';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
   dot2: JQuery<HTMLElement>
   dot3: JQuery<HTMLElement>
 
-  constructor() { }
+  constructor(private modalService: ModalServicesService) { }
 
   ngOnInit() {
 
@@ -51,7 +52,7 @@ export class HomeComponent implements OnInit {
   }
 
   openCalendarModal(): void {
-    $('app-calendar-modal').css('visibility', 'visible');
+    this.modalService.setCalendarDisplay(true);
   }
 
 }

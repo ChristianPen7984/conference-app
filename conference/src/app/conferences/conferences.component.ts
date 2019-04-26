@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Conferences } from '../conferences';
 import * as $ from 'jquery';
+import { ModalServicesService } from '../services/modal-services.service';
 
 @Component({
   selector: 'app-conferences',
@@ -12,7 +13,7 @@ export class ConferencesComponent implements OnInit {
   conferences: Object[] = [];
   searchData: string;
 
-  constructor() { 
+  constructor(private modalService: ModalServicesService) { 
   }
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class ConferencesComponent implements OnInit {
   }
 
   openCalendarModal(): void {
-    $('app-calendar-modal').css('visibility', 'visible');
+    this.modalService.setCalendarDisplay(true);
   }
 
   setFilter(filterInput: string) {

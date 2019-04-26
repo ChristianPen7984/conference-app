@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Conference } from '../conference';
 import { Conferences } from '../conferences';
 import { map } from '../map';
-import * as $ from 'jquery';
+import { ModalServicesService } from '../services/modal-services.service';
 
 @Component({
   selector: 'app-conference',
@@ -18,7 +18,7 @@ export class ConferenceComponent implements OnInit {
 
   conference: Conference;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private modalService: ModalServicesService) {
     Conferences.forEach((conference: Conference) => {
       if (conference.title.includes(this.route.snapshot.paramMap.get('title'))) {
         this.latitude = conference.lat;
@@ -33,7 +33,7 @@ export class ConferenceComponent implements OnInit {
   }
 
   openCalendarModal(): void {
-    $('app-calendar-modal').css('visibility', 'visible');
+    this.modalService.setCalendarDisplay(true);
   }
 
 }

@@ -1,0 +1,14 @@
+<div id="modal" class="modal" *ngIf="this.modalService.getCreateDisplay()">
+  <div class="modal-header">
+    <h1>Conference Created!</h1>
+    <i class="fa fa-times fa-2x pointer" (click)="close()"></i>
+  </div>
+  <div class="modal-body">
+    <div *ngFor="let conf of conference">
+      <div class="data">
+        <label>{{conf.name}}: <span>{{conf.val}}</span></label>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page-mask" (click)="close()" *ngIf="this.modalService.getCreateDisplay()"></div>

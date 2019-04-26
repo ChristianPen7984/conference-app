@@ -1,4 +1,4 @@
-<div id="modal" class="modal">
+<div id="modal" class="modal" *ngIf="this.modalService.getCalendarDisplay()">
   <div class="modal-header">
     <h1>Calendar View</h1>
     <i class="fa fa-times fa-2x pointer" (click)="close()"></i>
@@ -9,4 +9,4 @@
     </iframe>
   </div>
 </div>
-<div id="page-mask" (click)="close()"></div>
+<div id="page-mask" (click)="close()" *ngIf="this.modalService.getCalendarDisplay()"></div>

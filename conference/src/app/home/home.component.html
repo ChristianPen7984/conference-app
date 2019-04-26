@@ -68,4 +68,4 @@
     </div>
   </div>
 </div>
-<app-calendar-modal id="app-calendar-modal" style="visibility:hidden"></app-calendar-modal>
+<app-calendar-modal *ngIf="this.modalService.getCalendarDisplay()"></app-calendar-modal>

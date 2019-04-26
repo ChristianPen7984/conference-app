@@ -15,7 +15,8 @@ import { MapComponent } from './map/map.component';
 import { ConferencesPipe } from './pipes/conference-search.pipe';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
-import { CreateComponent } from './create/create.component'
+import { CreateComponent } from './create/create.component';
+import { CreateModalComponent } from './modals/create-modal/create-modal.component'
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreateComponent } from './create/create.component'
     AboutComponent,
     LoginComponent,
     CreateComponent,
+    CreateModalComponent,
   ],
   imports: [
     BrowserModule,
