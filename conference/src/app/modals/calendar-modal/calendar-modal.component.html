@@ -1,3 +1,12 @@
-<p>
-  calendar-modal works!
-</p>
+<div id="modal" class="modal">
+  <div class="modal-header">
+    <h1>Calendar View</h1>
+    <i class="fa fa-times fa-2x pointer" (click)="close()"></i>
+  </div>
+  <div class="modal-body">
+    <iframe
+      src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=vm6fubnli4gm4ridgtmo6cao6s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York">
+    </iframe>
+  </div>
+</div>
+<div id="page-mask" (click)="close()"></div>

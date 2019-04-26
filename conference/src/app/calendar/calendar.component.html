@@ -1,3 +1,25 @@
-<p>
-  calendar works!
-</p>
+<div class="calendar-container">
+  <div class="conferences">
+    <h1 ng-init="date">Upcoming Conferences for <br><i>{{date}}</i></h1>
+    <hr>
+    <div class="conferences-list">
+      <div class="card" *ngFor="let conference of conferences">
+        <div class="info">
+          <h2><i class="fa fa-calendar fa-md pointer" (click)="openCalendarModal()"></i>{{conference.title}}</h2>
+          <div class="info-data">
+            <p>When: {{conference.date}}</p>
+            <p>Where: {{conference.location}}</p>
+          </div>
+          <button class="pointer">View</button>
+        </div>
+        <div class="img"><img src="{{conference.image}}" alt="{{conference.title}}"></div>
+      </div>
+    </div>
+  </div>
+  <div class="calendar">
+    <iframe
+      src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23cccccc&amp;src=vm6fubnli4gm4ridgtmo6cao6s%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York">
+    </iframe>
+  </div>
+</div>
+<app-calendar-modal id="app-calendar-modal" style="visibility:hidden"></app-calendar-modal>

@@ -1,0 +1,131 @@
+.about-container {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+hr {
+    width: 30%;
+    margin: 0 auto;
+    border: solid 1px #000000;
+}
+
+.about-container>p {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 40px;
+}
+
+.services {
+    width: 100%;
+    height: auto;
+    background-color: #b1b1b1;
+    padding-bottom: 40px;
+}
+
+.services h2 {
+    text-align: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.service {
+    background-color: #ffffff;
+    flex-basis: auto;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(77, 76, 76, 0.2), 0 6px 20px 0 rgba(48, 47, 47, 0.2);
+    border: solid 1px #000000;
+}
+
+.service p, .service h3 {
+    padding: 20px;
+    margin: 0px;
+}
+
+.service h3 {
+    text-align: center;
+}
+
+@media (max-width: 1750px) {
+    .about-container>p {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1250px) {
+    .service {
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .service {
+        flex-basis: 29%;
+    }
+    .service h3 {
+        height: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    .about-container>p {
+        width: 80%;
+    }
+    .service {
+        margin: 10px;
+    }
+    .service p, .service h3 {
+        padding: 10px;
+    }
+    
+    .service p {
+        font-size: 15px;
+    }
+    .service h3 {
+        height: 40px;
+    }
+}
+
+@media (max-width: 750px) {
+    hr {
+        width: 50%;
+    }
+    .about-container>p {
+        font-size: 18px;
+        line-height: 24px;
+        width: 90%;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
+    .service {
+        flex-basis: 80%;
+    }
+    .service p {
+        padding: 20px;
+    }
+    .service h3 {
+        height: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .about-container>p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}

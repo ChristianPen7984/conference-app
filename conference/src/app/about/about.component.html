@@ -1,3 +1,23 @@
-<p>
-  about works!
-</p>
+<div class="about-container">
+  <h1>Who is Conference.io?</h1>
+  <hr>
+  <p>Here at Conference.io, our goal is to provide individuals with the best experience when
+    searching for conferences around the world. It is of our pleasure to allow access to the most efficient
+    information regarding particular conferences of interest. Typically, an individual would
+    spend a considerable amount of time browsing the web for various conferences. However,
+    we solve this problem by providing them all within a singular resource.
+    Users have the ability to browse our continously expanding conglomeration of conferences
+    with ease. Several pieces of data regarding a conference are provided including:
+    name, location, and date.</p>
+  <div class="services">
+    <div class="header">
+      <h2>Provided Services</h2>
+    </div>
+    <div class="body">
+      <div class="service" *ngFor="let service of services">
+        <h3>{{service.title}}</h3>
+        <p>{{service.desc}}</p>
+      </div>
+    </div>
+  </div>
+</div>
