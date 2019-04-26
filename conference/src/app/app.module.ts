@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ConferenceSearchPipe } from './pipes/conference-search.pipe';
 import { CalendarModalComponent } from './modals/calendar-modal/calendar-modal.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CalendarModalComponent } from './modals/calendar-modal/calendar-modal.c
     FooterComponent,
     NavbarComponent,
     ConferenceSearchPipe,
-    CalendarModalComponent
+    CalendarModalComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
