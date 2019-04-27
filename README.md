@@ -1,8 +1,8 @@
 **GETTING STARTED**
 ```
 Windows:
-./run.bat
+./conference/run.bat
 
 Linux:
-./run.sh
+./conference/run.sh
 ```
