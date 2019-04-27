@@ -1,8 +1,8 @@
 **GETTING STARTED**
 ```
-**Windows:**
+Windows:
 ./run.bat
 
-**Linux**
+Linux:
 ./run.sh
 ```
