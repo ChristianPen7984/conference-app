@@ -237,7 +237,7 @@ iframe {
         padding: 10px;
     }
     iframe {
-        display: none;
+        height: 400px;
     }
     h1 {
         margin-top: 0px;
@@ -261,5 +261,8 @@ iframe {
     button {
         padding: 8px 70px 8px 70px;
         font-size: 20px;
+    }
+    iframe {
+        height: 300px;
     }
 }
