@@ -1,6 +1,6 @@
 <div class="navbar-container" id="navbar">
   <a routerLink="/home" class="logo">Conference.io</a>
-  <a class="activeRoute" *ngFor="let route of routes" routerLink="{{route.link}}" routerLinkActive="active"
+  <a class="link" *ngFor="let route of routes" routerLink="{{route.link}}" routerLinkActive="active"
     [routerLinkActiveOptions]="{ exact: true }" (click)="collapseMenu()">{{route.title}}</a>
   <a class="hamburger-menu pointer" (click)="toggleHamburger()">
     <i class="fa fa-bars fa-lg"></i>
